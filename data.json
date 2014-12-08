@@ -1,0 +1,62 @@
+{
+  "products": [{
+    "productcode" : "10001",
+    "name": "saree1",
+    "pdesc" : "Lorenzo_Garcia",
+    "supplierName" : "sp1",
+    "priceINR": "1000.00",
+    "priceUSD": "45.00",
+    "sprice1": "45.00",
+    "sprice2": "45.00",
+    "sprice3": "45.00",
+    "sprice4": "45.00",
+    "sprice5": "45.00"
+  },{
+    "productcode" : "10001",
+    "name": "saree2",
+    "pdesc" : "Lorenzo_Garcia",
+    "supplierName" : "sp1",
+    "priceINR": "1000.00",
+    "priceUSD": "45.00",
+    "sprice1": "45.00",
+    "sprice2": "45.00",
+    "sprice3": "45.00",
+    "sprice4": "45.00",
+    "sprice5": "45.00"
+  },
+  {
+    "productcode" : "10002",
+    "name": "saree3",
+    "pdesc" : "Lorenzo_Garcia",
+    "supplierName" : "sp1",
+    "priceINR": "1000.00",
+    "priceUSD": "45.00",
+    "sprice1": "45.00",
+    "sprice2": "45.00",
+    "sprice3": "45.00",
+    "sprice4": "45.00",
+    "sprice5": "45.00"
+  }],
+ 
+  "sell" : [{
+    "productcode" : "saree1",
+    "price" : "20",
+    "shipping" : "0",
+    "custname" : ""
+  },{
+    "productcode" : "saree1",
+    "price" : "20",
+    "shipping" : "0",
+    "custname" : ""
+  }],
+ 
+  "meeting" : {
+    "date": "Thursday, March 27th",
+    "time": "6-9pm",
+    "where": {
+      "name": "Hotel Gwendoline",
+      "img": "/images/misc/hotel_gwendoline.jpg",
+      "address": "123 Elm Street"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+<html ng-app="scotchTodo">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Cloud Inventory</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/simple-sidebar.css" rel="stylesheet">
+    
+    <!-- SCROLLS -->
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="./javascripts/core.js"></script>
+
+</head>
+
+
+
+<body ng-controller="mainController">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Inventory</a>
+                </li>
+                <li>
+                    <a href="#">Purchase</a>
+                </li>
+                <li>
+                    <a href="#">Sales</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Product List <span class="label label-info">{{ todos.length }}</span></h1>
+                           <div class="container">
+        										<!-- TODO LIST -->
+        										<div id="todo-list" class="row">
+            									<div>
+
+                							<!-- LOOP OVER THE TODOS IN $scope.todos -->
+                							<div class="checkbox" >
+                	     					<table  BORDER="10" BORDERCOLOR="BLACK"   WIDTH="100%"   CELLPADDING="4" >
+           												<TR>
+      															<TH COLSPAN="11"><H3><BR>Products</H3></TH>
+      														</TR>
+   				 												<TR ALIGN="CENTER">
+   				 													<TH>Product code</TH>
+      		 													<TH>Name</TH>
+      		 													<TH>Desc</TH>
+      		 													<TH>Supplier</TH>
+      		 													<TH>Price INR</TH>
+      		 													<TH>Price USD</TH>
+      		 													<TH>Price1</TH>
+      		 													<TH>Price2</TH>
+      		 													<TH>Price3</TH>
+      		 													<TH>Price4</TH>
+      		 													<TH>Price5</TH>
+      		 												</tr>
+      		 												<tr ALIGN="CENTER" ng-repeat="todo in todos">
+      		 													<td>{{ todo.productcode }}</td>
+      		 													<td>{{ todo.name }}</td>
+      		 													<td>{{ todo.pdesc }}</td>
+    																<td>{{ todo.supplierName }}</td>
+    																<td>{{ todo.priceINR }}</td>
+    																<td>{{ todo.priceUSD }}</td>
+    																<td>{{ todo.sprice1 }}</td>
+    																<td>{{ todo.sprice2 }}</td>
+    																<td>{{ todo.sprice3 }}</td>
+    																<td>{{ todo.sprice5 }}</td>
+    																<td>{{ todo.sprice5 }}</td>
+      		 												</tr>  		    
+       													</table>
+                    						<label><input type="checkbox" ng-click="deleteTodo(todo._id)"> </label>
+                							</div>
+                							</div>
+        										</div>
+
+        										<!-- FORM TO CREATE TODOS -->
+        										<div id="todo-form" class="row">
+            									<div class="col-sm-8 col-sm-offset-2 text-center">
+                								<form>
+                    							<div class="form-group">
+
+                        							<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                        						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+                    							</div>
+
+                    							<!-- createToDo() WILL CREATE NEW TODOS -->
+                    							<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+                								</form>
+            									</div>
+        										</div>
+    											</div>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+</html>

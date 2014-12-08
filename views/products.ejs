@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+  <body>
+    <% include partials/template/header.ejs %>
+    
+   
+     <div >
+       <div>
+       <table  BORDER="10" BORDERCOLOR="RED"   WIDTH="100%"   CELLPADDING="4" >
+           <TR>
+      				<TH COLSPAN="11">
+         				<H3><BR>Products</H3>
+      		 		</TH>
+   				 </TR>
+   				 <TR ALIGN="CENTER">
+   				 		<TH>Product code</TH>
+      		 		<TH>Name</TH>
+      		 		<TH>Desc</TH>
+      		 		<TH>Supplier</TH>
+      		 		<TH>Price INR</TH>
+      		 		<TH>Price USD</TH>
+      		 		<TH>Price1</TH>
+      		 		<TH>Price2</TH>
+      		 		<TH>Price3</TH>
+      		 		<TH>Price4</TH>
+      		 		<TH>Price5</TH>
+      		 </tr>
+      		 <%appdata.products.forEach(function(item){%>
+      		 	<tr ALIGN="CENTER">
+      		 		<td><%=item.productcode%></td>
+      		 		<td><%=item.name%></td>
+      		 		<td><%=item.pdesc%></td>
+    					<td><%=item.supplierName%></td>
+    					<td><%=item.priceINR%></td>
+    					<td><%=item.priceUSD%></td>
+    					<td><%=item.sprice1%></td>
+    					<td><%=item.sprice2%></td>
+    					<td><%=item.sprice3%></td>
+    					<td><%=item.sprice4%></td>
+    					<td><%=item.sprice5%></td>
+      		 	</tr>
+      		 <%});%>    		    
+       </table>
+       </div>
+    <% include partials/template/footer.ejs %> 
+    <% include partials/template/jsdefaults.ejs %>
+ 
+  </body>
+</html>
